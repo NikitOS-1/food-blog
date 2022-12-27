@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import style from "./index.module.scss";
 
 const App = () => {
   return (
     <>
-      <div>Hello</div>
+      <div className={style.tomato}>Hello</div>
     </>
   );
 };
