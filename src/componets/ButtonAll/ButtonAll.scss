@@ -3,11 +3,13 @@
     background-color: transparent;
     padding: 10px;
 
-    .btn-text {
+    a {
         font-family: 'Nunito', sans-serif;
         color: white;
         font-size: 17px;
+        text-decoration: none;
     }
+
 
     &:hover {
         background-color: rgba(20, 19, 40, 0.746);

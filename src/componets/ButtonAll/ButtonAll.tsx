@@ -6,7 +6,9 @@ type Props = {
 const ButtonAll = ({ text }: Props) => {
   return (
     <div className="btn">
-      <span className="btn-text">{text}</span>
+      <a href="#" className="btn-text">
+        {text}
+      </a>
     </div>
   );
 };
