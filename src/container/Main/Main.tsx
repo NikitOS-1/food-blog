@@ -1,12 +1,12 @@
 import style from "./Main.module.scss";
-import homePicture from "../../assets/home.webp";
 
 type Props = {};
 const Main = (props: Props) => {
   return (
-    <div>
-      Main
-      <img src={homePicture} alt="#" />
+    <div className={style.main}>
+      <div className={style.title}>ЕДА КАК ИСКУССТВО</div>
+      <div className={style.about}>ФОТОГРАФИЯ</div>
+      <button className={style.btn}>Смотреть работы</button>
     </div>
   );
 };

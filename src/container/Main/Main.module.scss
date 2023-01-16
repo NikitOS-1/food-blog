@@ -1,0 +1,28 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1280px;
+    height: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-image: url("../../assets/home.webp");
+    background-repeat: no-repeat;
+
+    .title {
+        font-size: 70px;
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        margin: 10px;
+    }
+
+    .about {
+        font-size: 20px;
+        font-weight: 'Roboto', sans-serif;
+        color: white;
+        margin: 10px;
+    }
+
+    .btn {}
+}

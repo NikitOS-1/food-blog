@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
+import "./App.scss";
 
 type Props = {};
 
@@ -12,7 +13,7 @@ const App = (props: Props) => {
         <Grid item>
           <Header />
         </Grid>
-        <Grid>
+        <Grid item>
           <Main />
         </Grid>
         <Grid item>
