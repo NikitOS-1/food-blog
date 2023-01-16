@@ -1,0 +1,31 @@
+.nav {
+    ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin-right: 40px;
+
+            a {
+                font-family: 'Roboto',
+                    sans-serif;
+                padding: 5px;
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.428);
+                }
+
+                &:active {
+                    color: rgba(0, 0, 0, 0.22);
+                }
+
+                &:focus {
+                    color: rgba(0, 0, 0, 0.22);
+                }
+            }
+        }
+    }
+}
