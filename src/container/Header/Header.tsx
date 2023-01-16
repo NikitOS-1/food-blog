@@ -7,10 +7,12 @@ const Header = () => {
   return (
     <>
       <header className={style.header}>
-        <div className={style.logo}>
-          <h2>Еда как искусство</h2>
+        <div className={style.wrap}>
+          <div className={style.logo}>
+            <h2>Еда как искусство</h2>
+          </div>
+          <Menu />
         </div>
-        <Menu />
       </header>
     </>
   );

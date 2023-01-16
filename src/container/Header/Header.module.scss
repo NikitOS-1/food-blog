@@ -1,20 +1,24 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 15px;
-    height: 100px;
-    background-color: white;
+    position: fixed;
 
-    .logo {
-        margin-left: 50px;
+    .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1280px;
+        margin: 0 auto;
+        padding: 0 15px;
+        height: 100px;
+        background-color: white;
 
-        h2 {
-            font-family: 'Nunito',
-                sans-serif;
-            font-size: 30px;
+        .logo {
+            margin-left: 50px;
+
+            h2 {
+                font-family: 'Nunito',
+                    sans-serif;
+                font-size: 30px;
+            }
         }
     }
 }
