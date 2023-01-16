@@ -1,4 +1,5 @@
 import style from "./Main.module.scss";
+import ButtonAll from "../../componets/ButtonAll/ButtonAll";
 
 type Props = {};
 const Main = (props: Props) => {
@@ -6,7 +7,7 @@ const Main = (props: Props) => {
     <div className={style.main}>
       <div className={style.title}>ЕДА КАК ИСКУССТВО</div>
       <div className={style.about}>ФОТОГРАФИЯ</div>
-      <button className={style.btn}>Смотреть работы</button>
+      <ButtonAll text={"Смотреть работы"} />
     </div>
   );
 };
