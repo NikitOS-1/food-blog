@@ -14,11 +14,17 @@
             img {
                 width: 24px;
                 height: 24px;
+
+                &:hover {
+                    filter: opacity(50%);
+                    transition: 0.2s;
+                }
             }
         }
     }
 
     .after {
         margin: 10px;
+        opacity: 0.6;
     }
 }

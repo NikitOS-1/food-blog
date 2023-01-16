@@ -11,6 +11,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    filter: sepia(5%);
+    filter: brightness(85%);
+    filter: opacity(95%);
 
     .title {
         font-size: 70px;
