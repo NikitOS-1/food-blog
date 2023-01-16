@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .links {
+        margin: 25px 0;
+
+        a {
+            margin: 17px;
+            text-decoration: none;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .after {
+        margin: 10px;
+    }
+}
