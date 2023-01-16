@@ -1,5 +1,7 @@
 import { Grid } from "@mui/material";
 import Header from "../Header/Header";
+import Main from "../Main/Main";
+import Footer from "../Footer/Footer";
 
 type Props = {};
 
@@ -10,11 +12,11 @@ const App = (props: Props) => {
         <Grid item>
           <Header />
         </Grid>
-        <Grid item>
-          <p>Main</p>
+        <Grid>
+          <Main />
         </Grid>
         <Grid item>
-          <p>Footer</p>
+          <Footer />
         </Grid>
       </Grid>
     </>
