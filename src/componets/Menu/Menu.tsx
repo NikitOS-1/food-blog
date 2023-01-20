@@ -1,11 +1,11 @@
-import style from "./Menu.module.scss";
+import "./Menu.scss";
 import MenuItem from "./MenuItem";
 
 type Props = {};
 const Menu = (props: Props) => {
   return (
     <>
-      <nav className={style.nav}>
+      <nav className="nav">
         <ul>
           <li>
             <MenuItem to="/">Home</MenuItem>
