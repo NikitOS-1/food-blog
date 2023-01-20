@@ -1,4 +1,5 @@
 import style from "./Menu.module.scss";
+import MenuItem from "./MenuItem";
 
 type Props = {};
 const Menu = (props: Props) => {
@@ -7,22 +8,19 @@ const Menu = (props: Props) => {
       <nav className={style.nav}>
         <ul>
           <li>
-            <a href="#">Главная</a>
+            <MenuItem to="/">Home</MenuItem>
           </li>
           <li>
-            <a href="#">Портфолио</a>
+            <MenuItem to="portfolio">Portfolio</MenuItem>
           </li>
           <li>
-            <a href="#">Обо мне</a>
+            <MenuItem to="articles">Articles</MenuItem>
           </li>
           <li>
-            <a href="#">Книги</a>
+            <MenuItem to="favorites">Favorites</MenuItem>
           </li>
           <li>
-            <a href="#">Блог</a>
-          </li>
-          <li>
-            <a href="#">Связаться</a>
+            <MenuItem to="about">About</MenuItem>
           </li>
         </ul>
       </nav>
