@@ -1,14 +1,12 @@
-import style from "./Main.module.scss";
-import ButtonAll from "../../componets/ButtonAll/ButtonAll";
+import { BrowserRouter } from "react-router-dom";
+import Home from "../../pages/Home/Home";
 
 type Props = {};
 const Main = (props: Props) => {
   return (
-    <div className={style.main}>
-      <div className={style.title}>ЕДА КАК ИСКУССТВО</div>
-      <div className={style.about}>ФОТОГРАФИЯ</div>
-      <ButtonAll text={"Смотреть работы"} />
-    </div>
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>
   );
 };
 export default Main;
