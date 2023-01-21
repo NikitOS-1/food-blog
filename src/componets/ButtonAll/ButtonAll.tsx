@@ -1,14 +1,17 @@
+import { NavLink } from "react-router-dom";
 import "./ButtonAll.scss";
 
 type Props = {
-  text: string;
+  to: string;
+  children: string;
 };
-const ButtonAll = ({ text }: Props) => {
+
+const ButtonAll = ({ children, to }: Props) => {
   return (
     <div className="btn">
-      <a href="#" className="btn-text">
-        {text}
-      </a>
+      <NavLink to={to} className="btn-text">
+        {children}
+      </NavLink>
     </div>
   );
 };

@@ -1,0 +1,31 @@
+.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+
+    .meat {
+        width: 32%;
+        height: 900px;
+        background-image: url('../../assets/article-1.webp');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .fish {
+        width: 32%;
+        height: 900px;
+        background-image: url('../../assets/article-2.webp');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .dishes {
+        width: 32%;
+        height: 900px;
+        background-image: url('../../assets/article-3.webp');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
