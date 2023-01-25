@@ -15,7 +15,7 @@ const Portfolio = (props: Props) => {
         <ButtonAll to="/articles">See more</ButtonAll>
       </div>
       <div className={style.dishes}>
-        <h1>Dishes</h1>
+        <h1>Desserts</h1>
         <ButtonAll to="/articles">See more</ButtonAll>
       </div>
     </div>
