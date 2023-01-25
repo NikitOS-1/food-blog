@@ -168,4 +168,5 @@ const articalsArray: ArticalsProps[] = [
       "Macaron is a popular French dessert made with almond flour and meringue. Fruit and berry curd, chocolate ganache, caramel, cottage cheese cream and much more can be used as a filling.",
   },
 ];
+
 export default articalsArray;
