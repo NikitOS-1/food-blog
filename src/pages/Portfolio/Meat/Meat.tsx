@@ -1,5 +1,5 @@
-import { ArticalsProps } from "../../state/articalsArray";
-import ArticalItem from "./ArticalItem/ArticalItem";
+import { ArticalsProps } from "../../../state/articalsArray";
+import MeatItem from "./MeatItem";
 
 type Props = {
   articalsState: {
@@ -10,13 +10,18 @@ type Props = {
     description: string;
   }[];
 };
-
-const Articals = ({ articalsState }: Props) => {
+const Meat = ({ articalsState }: Props) => {
+  const meatCategory = articalsState.filter((category) => {
+    if (category.category === "meat") {
+      return true;
+    }
+  });
+  console.log(meatCategory);
   return (
     <>
-      {articalsState.map(
+      {meatCategory.map(
         ({ id, category, image, title, description }: ArticalsProps, i) => (
-          <ArticalItem
+          <MeatItem
             key={i}
             id={id}
             category={category}
@@ -29,4 +34,4 @@ const Articals = ({ articalsState }: Props) => {
     </>
   );
 };
-export default Articals;
+export default Meat;

@@ -3,16 +3,19 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import "./App.scss";
 import { CssBaseline } from "@mui/material";
+import { useState } from "react";
+import articalsArray, { ArticalsProps } from "../../state/articalsArray";
 
-type Props = {};
+const App = () => {
+  const [articalsState, setArticalsState] =
+    useState<ArticalsProps[]>(articalsArray);
 
-const App = (props: Props) => {
   return (
     <>
       <div className="app">
         <CssBaseline />
         <Header />
-        <Main />
+        <Main articalsState={articalsState} />
         <Footer />
       </div>
     </>
