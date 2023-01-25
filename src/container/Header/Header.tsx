@@ -2,8 +2,6 @@ import style from "./Header.module.scss";
 import Menu from "../../componets/Menu/Menu";
 import steakLogo from "../../assets/steak-logo.png";
 
-type Props = {};
-
 const Header = () => {
   return (
     <>

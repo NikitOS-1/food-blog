@@ -1,5 +1,5 @@
 import { ArticalsProps } from "../../../state/articalsArray";
-import MeatItem from "./MeatItem";
+import MeatItem from "./MeatItem/MeatItem";
 
 type Props = {
   articalsState: {
@@ -11,11 +11,9 @@ type Props = {
   }[];
 };
 const Meat = ({ articalsState }: Props) => {
-  const meatCategory = articalsState.filter((category) => {
-    if (category.category === "meat") {
-      return true;
-    }
-  });
+  const meatCategory = articalsState.filter((category) =>
+    category.category === "meat" ? true : false
+  );
   console.log(meatCategory);
   return (
     <>

@@ -11,7 +11,7 @@ const MeatItem = ({ id, category, image, title, description }: Props) => {
       <div>id: {id}</div>
       <div>category: {category}</div>
       <div>image: {image}</div>
-      <img sizes="small" src={image} alt="image" />
+      <img src={image} alt="art" />
       <div>title: {title}</div>
       <div>description: {description}</div>
     </>
