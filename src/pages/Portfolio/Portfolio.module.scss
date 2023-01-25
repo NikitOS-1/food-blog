@@ -4,28 +4,57 @@
     justify-content: space-between;
     width: 100%;
 
+    h1 {
+        margin-top: 150px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Nunito", sans-serif;
+    }
 
     .meat {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         width: 32%;
-        height: 900px;
+        height: 800px;
         background-image: url('../../assets/article-1.webp');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+
+        div {
+            margin-top: 30px;
+        }
     }
 
     .fish {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         width: 32%;
-        height: 900px;
+        height: 800px;
         background-image: url('../../assets/article-2.webp');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+
+        div {
+            margin-top: 30px;
+        }
     }
 
     .dishes {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         width: 32%;
-        height: 900px;
+        height: 800px;
         background-image: url('../../assets/article-3.webp');
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+
+        div {
+            margin-top: 30px;
+        }
     }
 }

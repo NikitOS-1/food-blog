@@ -1,3 +1,4 @@
+import ButtonAll from "../../componets/ButtonAll/ButtonAll";
 import style from "./Home.module.scss";
 
 type Props = {};
@@ -5,8 +6,9 @@ type Props = {};
 const Home = (props: Props) => {
   return (
     <div className={style.home}>
-      <div className={style.title}>ЕДА КАК ИСКУССТВО</div>
-      <div className={style.about}>ФОТОГРАФИЯ</div>
+      <div className={style.title}>Food is art</div>
+      <div className={style.about}>Photos</div>
+      <ButtonAll to="/portfolio">See more</ButtonAll>
     </div>
   );
 };

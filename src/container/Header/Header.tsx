@@ -1,5 +1,6 @@
 import style from "./Header.module.scss";
 import Menu from "../../componets/Menu/Menu";
+import steakLogo from "../../assets/steak-logo.png";
 
 type Props = {};
 
@@ -9,7 +10,8 @@ const Header = () => {
       <header className={style.header}>
         <div className={style.wrap}>
           <div className={style.logo}>
-            <h2>Еда как искусство</h2>
+            <h2>Food is art</h2>
+            <img src={steakLogo} alt="Logo" />
           </div>
           <Menu />
         </div>

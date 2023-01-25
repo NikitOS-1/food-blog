@@ -18,9 +18,7 @@ const Footer = (props: Props) => {
           <img src={iconInstagram} alt="instagram" />
         </a>
       </div>
-      <div className={style.after}>
-        © 2023 Еда как искусство. Nikita Puzyrenko
-      </div>
+      <div className={style.after}>© 2023 Food is art. Nikita Puzyrenko</div>
     </footer>
   );
 };
