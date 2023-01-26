@@ -1,5 +1,21 @@
-type Props = {};
-const Desserts = (props: Props) => {
-  return <div>Desserts</div>;
+type Props = {
+  id: number;
+  category: string;
+  image: string;
+  title: string;
+  description: string;
 };
-export default Desserts;
+
+const DessertsItem = ({ id, category, image, title, description }: Props) => {
+  return (
+    <>
+      <div>id: {id}</div>
+      <div>category: {category}</div>
+      <div>image: {image}</div>
+      <img src={image} alt="art" />
+      <div>title: {title}</div>
+      <div>description: {description}</div>
+    </>
+  );
+};
+export default DessertsItem;

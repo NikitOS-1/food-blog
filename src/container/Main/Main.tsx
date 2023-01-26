@@ -33,8 +33,14 @@ const Main = ({ articalsState }: Props) => {
           path="/articles/meat"
           element={<Meat articalsState={articalsState} />}
         />
-        <Route path="/articles/fish" element={<Fish />} />
-        <Route path="/articles/desserts" element={<Desserts />} />
+        <Route
+          path="/articles/fish"
+          element={<Fish articalsState={articalsState} />}
+        />
+        <Route
+          path="/articles/desserts"
+          element={<Desserts articalsState={articalsState} />}
+        />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
       </Routes>

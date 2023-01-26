@@ -10,11 +10,12 @@ type Props = {
     description: string;
   }[];
 };
+
 const Meat = ({ articalsState }: Props) => {
   const meatCategory = articalsState.filter((category) =>
     category.category === "meat" ? true : false
   );
-  console.log(meatCategory);
+
   return (
     <>
       {meatCategory.map(
