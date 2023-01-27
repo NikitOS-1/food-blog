@@ -1,0 +1,39 @@
+.wrap {
+    margin: 15px;
+    width: 30%;
+    height: 520px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.11);
+
+    .item {
+        width: 100%;
+
+
+
+        .image {
+            img {
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                width: 100%;
+            }
+        }
+
+        .title {
+            margin: 15px;
+            font-family: "Roboto", sans-serif;
+            font-size: large;
+            font-weight: 900;
+            letter-spacing: 0.3px;
+        }
+
+        .description {
+            margin: 0 15px;
+            font-family: "Nunito", sans-serif;
+            font-size: medium;
+            font-weight: lighter;
+            letter-spacing: 0.3px;
+        }
+    }
+}
