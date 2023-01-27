@@ -39,7 +39,105 @@
         }
 
         .itemOption {
-            background-color: tomato;
+            display: flex;
+            padding: 20px 15px;
+            justify-content: space-around;
+
+            .like {
+                display: flex;
+
+                .normalLike {
+                    width: 21px;
+                    height: 21px;
+                    display: block;
+                }
+
+                .hoverLike {
+                    width: 21px;
+                    height: 21px;
+                    display: none;
+                }
+
+                &:hover {
+                    .hoverLike {
+                        display: block;
+                    }
+
+                    .normalLike {
+                        display: none;
+                    }
+                }
+
+                .countLike {
+                    font-family: "Nunito", sans-serif;
+                    font-size: medium;
+                    font-weight: 500;
+                    letter-spacing: 0.3px;
+                    opacity: 0.5;
+                    padding-left: 10px;
+                }
+            }
+
+            .comment {
+                display: flex;
+
+                .commentNormal {
+                    width: 21px;
+                    height: 21px;
+                    display: block;
+                }
+
+                .commentHover {
+                    width: 21px;
+                    height: 21px;
+                    display: none;
+                }
+
+                &:hover {
+                    .commentHover {
+                        display: block;
+                    }
+
+                    .commentNormal {
+                        display: none;
+                    }
+                }
+            }
+
+            .share {
+                display: flex;
+
+                .shareNormal {
+                    width: 21px;
+                    height: 21px;
+                    display: block;
+                }
+
+                .shareHover {
+                    width: 21px;
+                    height: 21px;
+                    display: none;
+                }
+
+                &:hover {
+                    .shareHover {
+                        display: block;
+                    }
+
+                    .shareNormal {
+                        display: none;
+                    }
+                }
+
+                .shareTitle {
+                    font-family: "Nunito", sans-serif;
+                    font-size: medium;
+                    font-weight: 500;
+                    letter-spacing: 0.3px;
+                    opacity: 0.5;
+                    padding-left: 10px;
+                }
+            }
         }
     }
 }
