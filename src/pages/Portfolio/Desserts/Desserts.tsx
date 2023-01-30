@@ -34,4 +34,5 @@ const Desserts = ({ articalsState }: Props) => {
     </div>
   );
 };
+
 export default Desserts;

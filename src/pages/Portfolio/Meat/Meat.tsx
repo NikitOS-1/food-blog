@@ -1,5 +1,6 @@
+import ArticalItem from "../../../componets/ArticalItem/ArticalItem";
 import { ArticalsProps } from "../../../state/articalsArray";
-import MeatItem from "./MeatItem/MeatItem";
+import style from "./Meat.module.scss";
 
 type Props = {
   articalsState: {
@@ -17,10 +18,10 @@ const Meat = ({ articalsState }: Props) => {
   );
 
   return (
-    <>
+    <div className={style.items}>
       {meatCategory.map(
         ({ id, category, image, title, description }: ArticalsProps, i) => (
-          <MeatItem
+          <ArticalItem
             key={i}
             id={id}
             category={category}
@@ -30,7 +31,7 @@ const Meat = ({ articalsState }: Props) => {
           />
         )
       )}
-    </>
+    </div>
   );
 };
 export default Meat;
