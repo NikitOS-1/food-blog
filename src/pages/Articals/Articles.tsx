@@ -1,5 +1,6 @@
+import ArticalItem from "../../componets/ArticalItem/ArticalItem";
 import { ArticalsProps } from "../../state/articalsArray";
-import Artical from "./ArticalItem/Artical";
+import style from "./Articles.module.scss";
 
 type Props = {
   articalsState: {
@@ -13,10 +14,10 @@ type Props = {
 
 const Articals = ({ articalsState }: Props) => {
   return (
-    <>
+    <div className={style.items}>
       {articalsState.map(
         ({ id, category, image, title, description }: ArticalsProps, i) => (
-          <Artical
+          <ArticalItem
             key={i}
             id={id}
             category={category}
@@ -26,7 +27,7 @@ const Articals = ({ articalsState }: Props) => {
           />
         )
       )}
-    </>
+    </div>
   );
 };
 export default Articals;
