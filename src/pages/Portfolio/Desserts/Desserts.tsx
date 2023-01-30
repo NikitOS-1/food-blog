@@ -1,6 +1,6 @@
 import { ArticalsProps } from "../../../state/articalsArray";
-import DessertsItem from "./DessertsItem/DessertsItem";
 import style from "./Desserts.module.scss";
+import ArticalItem from "../../../componets/ArticalItem/ArticalItem";
 
 type Props = {
   articalsState: {
@@ -21,7 +21,7 @@ const Desserts = ({ articalsState }: Props) => {
     <div className={style.items}>
       {dessertsCategory.map(
         ({ id, category, image, title, description }: ArticalsProps, i) => (
-          <DessertsItem
+          <ArticalItem
             key={i}
             id={id}
             category={category}

@@ -6,7 +6,7 @@ type Props = {
   description: string;
 };
 
-const ArticalItem = ({ id, category, image, title, description }: Props) => {
+const Artical = ({ id, category, image, title, description }: Props) => {
   return (
     <>
       <div>id: {id}</div>
@@ -18,4 +18,4 @@ const ArticalItem = ({ id, category, image, title, description }: Props) => {
     </>
   );
 };
-export default ArticalItem;
+export default Artical;

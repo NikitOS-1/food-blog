@@ -1,5 +1,5 @@
 import { ArticalsProps } from "../../state/articalsArray";
-import ArticalItem from "./ArticalItem/ArticalItem";
+import Artical from "./ArticalItem/Artical";
 
 type Props = {
   articalsState: {
@@ -16,7 +16,7 @@ const Articals = ({ articalsState }: Props) => {
     <>
       {articalsState.map(
         ({ id, category, image, title, description }: ArticalsProps, i) => (
-          <ArticalItem
+          <Artical
             key={i}
             id={id}
             category={category}
