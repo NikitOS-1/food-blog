@@ -1,3 +1,18 @@
+.btnBack {
+    margin: 5px;
+
+    a {
+        text-decoration: none;
+        font-size: large;
+        font-weight: bold;
+        color: black;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
 .items {
     display: flex;
     align-items: center;

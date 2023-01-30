@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArticalItem from "../../../componets/ArticalItem/ArticalItem";
 import { ArticalsProps } from "../../../state/articalsArray";
 import style from "./Meat.module.scss";
@@ -18,20 +19,25 @@ const Meat = ({ articalsState }: Props) => {
   );
 
   return (
-    <div className={style.items}>
-      {meatCategory.map(
-        ({ id, category, image, title, description }: ArticalsProps, i) => (
-          <ArticalItem
-            key={i}
-            id={id}
-            category={category}
-            image={image}
-            title={title}
-            description={description}
-          />
-        )
-      )}
-    </div>
+    <>
+      <div className={style.btnBack}>
+        <Link to="/portfolio">{"< Back"}</Link>
+      </div>
+      <div className={style.items}>
+        {meatCategory.map(
+          ({ id, category, image, title, description }: ArticalsProps, i) => (
+            <ArticalItem
+              key={i}
+              id={id}
+              category={category}
+              image={image}
+              title={title}
+              description={description}
+            />
+          )
+        )}
+      </div>
+    </>
   );
 };
 export default Meat;

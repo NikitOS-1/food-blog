@@ -1,6 +1,7 @@
 import { ArticalsProps } from "../../../state/articalsArray";
 import style from "./Desserts.module.scss";
 import ArticalItem from "../../../componets/ArticalItem/ArticalItem";
+import { Link } from "react-router-dom";
 
 type Props = {
   articalsState: {
@@ -18,20 +19,25 @@ const Desserts = ({ articalsState }: Props) => {
   );
 
   return (
-    <div className={style.items}>
-      {dessertsCategory.map(
-        ({ id, category, image, title, description }: ArticalsProps, i) => (
-          <ArticalItem
-            key={i}
-            id={id}
-            category={category}
-            image={image}
-            title={title}
-            description={description}
-          />
-        )
-      )}
-    </div>
+    <>
+      <div className={style.btnBack}>
+        <Link to="/portfolio">{"< Back"}</Link>
+      </div>
+      <div className={style.items}>
+        {dessertsCategory.map(
+          ({ id, category, image, title, description }: ArticalsProps, i) => (
+            <ArticalItem
+              key={i}
+              id={id}
+              category={category}
+              image={image}
+              title={title}
+              description={description}
+            />
+          )
+        )}
+      </div>
+    </>
   );
 };
 
