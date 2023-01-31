@@ -8,6 +8,8 @@ import Home from "../../pages/Home/Home";
 import Meat from "../../pages/Portfolio/Meat/Meat";
 import Portfolio from "../../pages/Portfolio/Portfolio";
 import style from "./Main.module.scss";
+import { useState } from "react";
+import ArticalExtendedItem from "../../componets/ArticalItem/ArticalExtendedItem";
 
 type Props = {
   articalsState: {
@@ -20,6 +22,12 @@ type Props = {
 };
 
 const Main = ({ articalsState }: Props) => {
+  const [currentId, setCurrentId] = useState<number>(0);
+
+  const getId = (id: number) => {
+    setCurrentId(id);
+  };
+
   return (
     <main className={style.main}>
       <Routes>
@@ -27,7 +35,16 @@ const Main = ({ articalsState }: Props) => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route
           path="/articles"
-          element={<Articles articalsState={articalsState} />}
+          element={<Articles articalsState={articalsState} getId={getId} />}
+        />
+        <Route
+          path={`/articles/${currentId}`}
+          element={
+            <ArticalExtendedItem
+              articalsState={articalsState}
+              currentId={currentId}
+            />
+          }
         />
         <Route
           path="/articles/meat"
