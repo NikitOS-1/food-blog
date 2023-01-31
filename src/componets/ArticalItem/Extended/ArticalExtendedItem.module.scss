@@ -1,0 +1,21 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid black;
+
+    .image {
+        img {
+            width: 700px;
+            height: 600px;
+        }
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .description {}
+}

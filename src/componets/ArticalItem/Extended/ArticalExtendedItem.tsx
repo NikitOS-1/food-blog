@@ -34,9 +34,11 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
         {articalForId.map(
           ({ id, category, image, title, description }: Artical, i) => (
             <div key={i} className={style.wrap}>
-              <img src={image} alt="art" />
-              <div>{title}</div>
-              <div>{description}</div>
+              <div className={style.image}>
+                <img src={image} alt="art" />
+              </div>
+              <div className={style.title}>{title}</div>
+              <div className={style.description}>{description}</div>
             </div>
           )
         )}
