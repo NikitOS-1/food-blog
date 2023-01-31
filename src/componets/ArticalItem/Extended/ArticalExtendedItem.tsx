@@ -27,7 +27,7 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
 
   return (
     <>
-      <div>
+      <div className={style.btnBack}>
         <Link to="/articles">{"< Back"}</Link>
       </div>
       <div>
