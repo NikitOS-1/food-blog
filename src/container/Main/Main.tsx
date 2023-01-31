@@ -9,7 +9,7 @@ import Meat from "../../pages/Portfolio/Meat/Meat";
 import Portfolio from "../../pages/Portfolio/Portfolio";
 import style from "./Main.module.scss";
 import { useState } from "react";
-import ArticalExtendedItem from "../../componets/ArticalItem/ArticalExtendedItem";
+import ArticalExtendedItem from "../../componets/ArticalItem/Extended/ArticalExtendedItem";
 
 type Props = {
   articalsState: {

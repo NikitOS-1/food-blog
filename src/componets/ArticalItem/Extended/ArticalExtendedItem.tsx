@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import style from "./ArticalExtendedItem.module.scss";
 
 type Props = {
   articalsState: {
@@ -32,13 +33,10 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
       <div>
         {articalForId.map(
           ({ id, category, image, title, description }: Artical, i) => (
-            <div key={i}>
-              {i}
-              {id}
-              {category}
+            <div key={i} className={style.wrap}>
               <img src={image} alt="art" />
-              {title}
-              {description}
+              <div>{title}</div>
+              <div>{description}</div>
             </div>
           )
         )}
