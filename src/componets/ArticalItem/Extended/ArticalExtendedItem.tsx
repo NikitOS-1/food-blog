@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Coment from "../Coment/Coment";
 import style from "./ArticalExtendedItem.module.scss";
 
 type Props = {
@@ -170,6 +171,7 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
           )
         )}
       </div>
+      <Coment />
     </>
   );
 };
