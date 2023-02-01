@@ -9,7 +9,7 @@ type Coment = {
 };
 
 const Coment = (props: Props) => {
-  let arrComents: Coment[] = [
+  const arrComents: Coment[] = [
     {
       name: "nik",
       text: "hello",
