@@ -16,15 +16,66 @@
 .wrap {
     margin: 0 auto;
     display: flex;
-    align-items: center;
+
     flex-direction: column;
     justify-content: center;
     padding: 30px 150px;
     width: 80%;
+    height: max-content;
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.11);
     box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.11);
+
+    .category {
+        font-family: "Nunito", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        margin-bottom: 10px;
+    }
+
+    .titleFirst {
+        display: flex;
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
+        font-weight: bolder;
+        letter-spacing: 0.2px;
+
+    }
+
+    .duration {
+        display: flex;
+        align-items: center;
+        width: 200px;
+        justify-content: space-between;
+        margin: 20px 0px;
+
+        .time {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 5px;
+            }
+
+            &::after {
+                content: '•';
+                color: rgb(0 0 0/25%);
+                font-size: 16px;
+                padding-left: 9px;
+            }
+        }
+    }
+
+    .portions {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 5px;
+        }
+    }
 
     .image {
         img {
@@ -37,12 +88,116 @@
         }
     }
 
+    .itemOption {
+        margin: 15px 0px;
+        display: flex;
+        padding: 10px 15px;
+        justify-content: space-around;
+
+        .like {
+            display: flex;
+
+            .normalLike {
+                width: 21px;
+                height: 21px;
+                display: block;
+            }
+
+            .hoverLike {
+                width: 21px;
+                height: 21px;
+                display: none;
+            }
+
+            &:hover {
+                .hoverLike {
+                    display: block;
+                }
+
+                .normalLike {
+                    display: none;
+                }
+            }
+
+            .countLike {
+                font-family: "Nunito", sans-serif;
+                font-size: medium;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+                opacity: 0.5;
+                padding-left: 10px;
+            }
+        }
+
+        .comment {
+            display: flex;
+
+            .commentNormal {
+                width: 21px;
+                height: 21px;
+                display: block;
+            }
+
+            .commentHover {
+                width: 21px;
+                height: 21px;
+                display: none;
+            }
+
+            &:hover {
+                .commentHover {
+                    display: block;
+                }
+
+                .commentNormal {
+                    display: none;
+                }
+            }
+        }
+
+        .share {
+            display: flex;
+
+            .shareNormal {
+                width: 21px;
+                height: 21px;
+                display: block;
+            }
+
+            .shareHover {
+                width: 21px;
+                height: 21px;
+                display: none;
+            }
+
+            &:hover {
+                .shareHover {
+                    display: block;
+                }
+
+                .shareNormal {
+                    display: none;
+                }
+            }
+
+            .shareTitle {
+                font-family: "Nunito", sans-serif;
+                font-size: medium;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+                opacity: 0.5;
+                padding-left: 10px;
+            }
+        }
+    }
+
     .title {
+        text-align: center;
         margin: 15px;
         font-family: "Roboto", sans-serif;
-        font-size: 30px;
-        font-weight: 900;
-        letter-spacing: 0.3px;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
     }
 
     .description {
@@ -51,5 +206,22 @@
         font-size: 20px;
         font-weight: lighter;
         letter-spacing: 0.4px;
+    }
+
+    .recipe {
+        .ingredients {
+            margin: 15px;
+            font-family: "Nunito", sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.4px;
+        }
+
+        .ingItem {
+            margin: 15px;
+            font-size: 20px;
+            font-weight: lighter;
+            letter-spacing: 0.5px;
+        }
     }
 }
