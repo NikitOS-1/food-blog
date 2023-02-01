@@ -48,9 +48,9 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
                     <path
                       d="M17.7082 10.0004C17.7082 14.2579 14.2573 17.7088 9.99984 17.7088C5.74234 17.7088 2.2915 14.2579 2.2915 10.0004C2.2915 5.74295 5.74234 2.29211 9.99984 2.29211C14.2573 2.29211 17.7082 5.74295 17.7082 10.0004Z"
                       stroke="#333333"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"></path>
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"></path>
                     <path
                       d="M12.8594 12.4524L9.71777 10.5782V6.53906"
                       stroke="#333333"
