@@ -1,3 +1,4 @@
+import moment from "moment";
 import React, { useState } from "react";
 import style from "./Coment.module.scss";
 
@@ -43,8 +44,6 @@ const Coment = (props: Props) => {
       });
     }
   };
-  let date = new Date().toLocaleString();
-  console.log(date);
   return (
     <div className={style.wrap}>
       <form className={style.form} onSubmit={handleSubmit}>
@@ -80,8 +79,20 @@ const Coment = (props: Props) => {
       <div className={style.view}>
         {coment.map(({ name, text }: Coment, i) => (
           <div key={i}>
-            <div className={style.newName}>{0}</div>
-            <div className={style.newName}>{name}</div>
+            <div className={style.newName}>
+              <div className={style.userWraper}>
+                <div className={style.userAva}>
+                  <span>{name[0]}</span>
+                </div>
+                <div className={style.userName}>
+                  <h4>{name}</h4>
+                </div>
+              </div>
+              <div className={style.dateComment}>
+                <span>{moment().format("MMMM Do YYYY")}</span>
+              </div>
+            </div>
+
             <div className={style.newText}>{text}</div>
           </div>
         ))}
