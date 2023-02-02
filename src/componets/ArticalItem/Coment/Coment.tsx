@@ -33,6 +33,7 @@ const Coment = (props: Props) => {
     if (newComent.name === "" || newComent.text === "") {
     } else {
       setComent((prevState: Coment[]) => [...prevState, newComent]);
+
       setNewComent({
         name: "",
         text: "",

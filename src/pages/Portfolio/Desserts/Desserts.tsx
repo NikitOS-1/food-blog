@@ -11,9 +11,10 @@ type Props = {
     title: string;
     description: string;
   }[];
+  getId: (id: number) => void;
 };
 
-const Desserts = ({ articalsState }: Props) => {
+const Desserts = ({ articalsState, getId }: Props) => {
   const dessertsCategory = articalsState.filter((category) =>
     category.category === "desserts" ? true : false
   );
@@ -33,6 +34,7 @@ const Desserts = ({ articalsState }: Props) => {
               image={image}
               title={title}
               description={description}
+              getId={getId}
             />
           )
         )}
