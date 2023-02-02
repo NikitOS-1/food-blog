@@ -20,8 +20,39 @@ const ArticalItem = ({
   getId,
 }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
-  const updateCountLike = () => {
-    setCountLike((prevState: number) => prevState + 1);
+
+  let likeIcon = (
+    <svg className={style.likeIcon} width="18" height="18" viewBox="0 0 18 18">
+      <path
+        d="M8.78095 17.1159C6.79122 15.8914 4.9402 14.4502 3.26104 12.8181C2.0805 11.6427 1.18178 10.2098 0.633692 8.62909C-0.352598 5.56276 0.799455 2.05241 4.02355 1.01354C5.718 0.468048 7.5686 1.5118 8.99644 2.58331C10.4248 1.5131 12.2748 0.469463 13.9693 1.01354C17.1934 2.05241 18.3538 5.56276 17.3675 8.62909C16.8194 10.2098 15.9207 11.6427 14.7401 12.8181C13.061 14.4502 11.2099 15.8914 9.22022 17.1159L9.00473 17.25L8.78095 17.1159Z"
+        fill="#333333"></path>
+    </svg>
+  );
+  let unLikeIcon = (
+    <svg
+      className={style.unLikeIcon}
+      width="20"
+      height="18"
+      viewBox="0 0 20 18"
+      fill="none">
+      <path
+        d="M9.78095 17.1159C7.79122 15.8914 5.9402 14.4502 4.26104 12.8181C3.0805 11.6427 2.18178 10.2098 1.63369 8.62909C0.647402 5.56276 1.79946 2.05241 5.02355 1.01354C6.718 0.468048 8.5686 1.5118 9.99644 2.58331C11.4248 1.5131 13.2748 0.469463 14.9693 1.01354C18.1934 2.05241 19.3538 5.56276 18.3675 8.62909C17.8194 10.2098 16.9207 11.6427 15.7401 12.8181C14.061 14.4502 12.2099 15.8914 10.2202 17.1159L10.0047 17.25L9.78095 17.1159Z"
+        stroke="#999999"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"></path>
+    </svg>
+  );
+  const [isLike, setIsLike] = useState<boolean>(false);
+
+  const handleLike = (bool: boolean) => {
+    if (bool) {
+      setIsLike(false);
+      setCountLike((prevState: number) => prevState - 1);
+    } else {
+      setIsLike(true);
+      setCountLike((prevState: number) => prevState + 1);
+    }
   };
 
   return (
@@ -35,29 +66,8 @@ const ArticalItem = ({
           <div className={style.description}>{description}</div>
         </Link>
         <div className={style.itemOption}>
-          <div className={style.like} onClick={updateCountLike}>
-            <svg
-              className={style.normalLike}
-              width="20"
-              height="18"
-              viewBox="0 0 20 18"
-              fill="none">
-              <path
-                d="M9.78095 17.1159C7.79122 15.8914 5.9402 14.4502 4.26104 12.8181C3.0805 11.6427 2.18178 10.2098 1.63369 8.62909C0.647402 5.56276 1.79946 2.05241 5.02355 1.01354C6.718 0.468048 8.5686 1.5118 9.99644 2.58331C11.4248 1.5131 13.2748 0.469463 14.9693 1.01354C18.1934 2.05241 19.3538 5.56276 18.3675 8.62909C17.8194 10.2098 16.9207 11.6427 15.7401 12.8181C14.061 14.4502 12.2099 15.8914 10.2202 17.1159L10.0047 17.25L9.78095 17.1159Z"
-                stroke="#999999"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"></path>
-            </svg>
-            <svg
-              className={style.hoverLike}
-              width="18"
-              height="18"
-              viewBox="0 0 18 18">
-              <path
-                d="M8.78095 17.1159C6.79122 15.8914 4.9402 14.4502 3.26104 12.8181C2.0805 11.6427 1.18178 10.2098 0.633692 8.62909C-0.352598 5.56276 0.799455 2.05241 4.02355 1.01354C5.718 0.468048 7.5686 1.5118 8.99644 2.58331C10.4248 1.5131 12.2748 0.469463 13.9693 1.01354C17.1934 2.05241 18.3538 5.56276 17.3675 8.62909C16.8194 10.2098 15.9207 11.6427 14.7401 12.8181C13.061 14.4502 11.2099 15.8914 9.22022 17.1159L9.00473 17.25L8.78095 17.1159Z"
-                fill="#333333"></path>
-            </svg>
+          <div className={style.like} onClick={() => handleLike(isLike)}>
+            {isLike ? likeIcon : unLikeIcon}
             <span className={style.countLike}>{countLike}</span>
           </div>
           <div className={style.comment}>

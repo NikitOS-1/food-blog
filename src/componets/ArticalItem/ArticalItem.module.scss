@@ -55,16 +55,16 @@
             .like {
                 display: flex;
 
-                .normalLike {
+                .unLikeIcon {
                     width: 21px;
                     height: 21px;
-                    display: none;
+                    display: block;
                 }
 
-                .hoverLike {
+                .likeIcon {
                     width: 21px;
                     height: 21px;
-                    display: none;
+                    display: block;
                 }
 
                 // .hoverLike {
