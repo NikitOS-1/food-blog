@@ -58,7 +58,7 @@
                 .normalLike {
                     width: 21px;
                     height: 21px;
-                    display: block;
+                    display: none;
                 }
 
                 .hoverLike {
@@ -67,15 +67,13 @@
                     display: none;
                 }
 
-                &:hover {
-                    .hoverLike {
-                        display: block;
-                    }
+                // .hoverLike {
+                //     display: block;
+                // }
 
-                    .normalLike {
-                        display: none;
-                    }
-                }
+                // .normalLike {
+                //     display: none;
+                // }
 
                 .countLike {
                     font-family: "Nunito", sans-serif;
