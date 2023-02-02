@@ -21,14 +21,14 @@ const ArticalItem = ({
 }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
 
-  let likeIcon = (
+  const likeIcon = (
     <svg className={style.likeIcon} width="18" height="18" viewBox="0 0 18 18">
       <path
         d="M8.78095 17.1159C6.79122 15.8914 4.9402 14.4502 3.26104 12.8181C2.0805 11.6427 1.18178 10.2098 0.633692 8.62909C-0.352598 5.56276 0.799455 2.05241 4.02355 1.01354C5.718 0.468048 7.5686 1.5118 8.99644 2.58331C10.4248 1.5131 12.2748 0.469463 13.9693 1.01354C17.1934 2.05241 18.3538 5.56276 17.3675 8.62909C16.8194 10.2098 15.9207 11.6427 14.7401 12.8181C13.061 14.4502 11.2099 15.8914 9.22022 17.1159L9.00473 17.25L8.78095 17.1159Z"
         fill="#333333"></path>
     </svg>
   );
-  let unLikeIcon = (
+  const unLikeIcon = (
     <svg
       className={style.unLikeIcon}
       width="20"
