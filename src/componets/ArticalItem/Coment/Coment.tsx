@@ -43,6 +43,8 @@ const Coment = (props: Props) => {
       });
     }
   };
+  let date = new Date().toLocaleString();
+  console.log(date);
   return (
     <div className={style.wrap}>
       <form className={style.form} onSubmit={handleSubmit}>
@@ -78,6 +80,7 @@ const Coment = (props: Props) => {
       <div className={style.view}>
         {coment.map(({ name, text }: Coment, i) => (
           <div key={i}>
+            <div className={style.newName}>{0}</div>
             <div className={style.newName}>{name}</div>
             <div className={style.newText}>{text}</div>
           </div>
