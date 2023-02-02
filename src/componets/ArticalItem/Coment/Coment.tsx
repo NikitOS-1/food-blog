@@ -10,12 +10,7 @@ type Coment = {
 };
 
 const Coment = (props: Props) => {
-  const arrComents: Coment[] = [
-    {
-      name: "nik",
-      text: "hello",
-    },
-  ];
+  const arrComents: Coment[] = [];
   const [coment, setComent] = useState<Coment[]>(arrComents);
   const [newComent, setNewComent] = useState<Coment>({
     name: "",

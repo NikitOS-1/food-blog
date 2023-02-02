@@ -154,7 +154,12 @@
 
         .newText {
             width: 100%;
-            border: 1px solid black;
+            padding: 10px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.348);
+            border-radius: 10px;
+            color: black;
         }
     }
 }
