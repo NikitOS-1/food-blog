@@ -8,7 +8,7 @@ type Props = {
   image: string;
   title: string;
   description: string;
-  getId?: any;
+  getId: (id: number) => void;
 };
 
 const ArticalItem = ({

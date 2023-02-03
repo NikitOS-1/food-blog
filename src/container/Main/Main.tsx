@@ -29,6 +29,7 @@ const Main = ({ articalsState }: Props) => {
   };
 
   // -------------LIKES SYSTEM FOR COMPONENTS AND PAGE FAVORITES-----------------
+
   return (
     <main className={style.main}>
       <Routes>
