@@ -49,9 +49,11 @@ const ArticalItem = ({
     if (bool) {
       setIsLike(false);
       setCountLike((prevState: number) => prevState - 1);
+      getId(id);
     } else {
       setIsLike(true);
       setCountLike((prevState: number) => prevState + 1);
+      getId(id);
     }
   };
   return (

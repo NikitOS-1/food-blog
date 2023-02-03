@@ -22,7 +22,7 @@ type Props = {
 };
 
 const Main = ({ articalsState }: Props) => {
-  // -------------GET 'ID' FOR PAGES ARTICAL EXTENDED-----------------
+  // -------------GET 'ID' SELECT-----------------
   const [currentId, setCurrentId] = useState<number>(0);
   const getId = (id: number) => {
     setCurrentId(id);
@@ -60,7 +60,12 @@ const Main = ({ articalsState }: Props) => {
           path="/articles/desserts"
           element={<Desserts articalsState={articalsState} getId={getId} />}
         />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route
+          path="/favorites"
+          element={
+            <Favorites articalsState={articalsState} currentId={currentId} />
+          }
+        />
         <Route path="/about" element={<About />} />
       </Routes>
     </main>
