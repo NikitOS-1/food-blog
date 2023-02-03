@@ -29,19 +29,6 @@ const Main = ({ articalsState }: Props) => {
   };
 
   // -------------LIKES SYSTEM FOR COMPONENTS AND PAGE FAVORITES-----------------
-  const [likeArtical, setLikeArtical] = useState<number>();
-  const updateLikeArtical = (id: number) => {
-    setLikeArtical(id);
-  };
-  const itIsLike = articalsState.filter((articals) =>
-    articals.id === likeArtical ? true : false
-  );
-
-  const [favorite, setFavorite] = useState<any>(itIsLike);
-  const addToFavoriteArt = () => {
-    setFavorite((prevState: any) => [...prevState, itIsLike]);
-  };
-  console.log(Object.keys(favorite).map((i) => [i]));
   return (
     <main className={style.main}>
       <Routes>
@@ -49,14 +36,7 @@ const Main = ({ articalsState }: Props) => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route
           path="/articles"
-          element={
-            <Articles
-              articalsState={articalsState}
-              getId={getId}
-              updateLikeArtical={updateLikeArtical}
-              addToFavoriteArt={addToFavoriteArt}
-            />
-          }
+          element={<Articles articalsState={articalsState} getId={getId} />}
         />
         <Route
           path={`/articles/${currentId}`}
@@ -79,10 +59,7 @@ const Main = ({ articalsState }: Props) => {
           path="/articles/desserts"
           element={<Desserts articalsState={articalsState} getId={getId} />}
         />
-        <Route
-          path="/favorites"
-          element={<Favorites likeArtical={likeArtical} favorite={favorite} />}
-        />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </main>

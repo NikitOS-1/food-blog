@@ -4,29 +4,12 @@ import ArticalItem from "../../componets/ArticalItem/ArticalItem";
 import { ArticalsProps } from "../../state/articalsArray";
 import style from "./Favorites.module.scss";
 
-type Props = {
-  favorite: {
-    id: number;
-    category: string;
-    image: string;
-    title: string;
-    description: string;
-  }[];
-  likeArtical?: number;
-};
-const Favorites = ({ favorite }: Props) => {
-  // const itIsLike = articalsState.filter((articals) =>
-  //   articals.id === likeArtical ? true : false
-  // );
-  // const [favorite, setFavorite] = useState<any>(itIsLike);
-
-  // const addToFavoriteArt = () => {
-  //   setFavorite((prevState: any) => [...prevState, itIsLike]);
-  // };
-
+type Props = {};
+const Favorites = ({}: Props) => {
   return (
     <>
-      <div className={style.btnBack}>
+      <div>Favorites</div>
+      {/* <div className={style.btnBack}>
         <Link to="/articles">{"< Back"}</Link>
       </div>
       <div className={style.items}>
@@ -41,7 +24,7 @@ const Favorites = ({ favorite }: Props) => {
             />
           )
         )}
-      </div>
+      </div> */}
     </>
   );
 };
