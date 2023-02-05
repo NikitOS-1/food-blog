@@ -14,17 +14,28 @@ type Props = {
   }[];
   currentId: number;
 };
-
-type LikeArticals = {
+type Art = {
   id: number;
   category: string;
   image: string;
   title: string;
   description: string;
 };
+
 const Favorites = ({ currentId, articalsState }: Props) => {
+  console.log("currentId: " + currentId);
+  let foo = Object.values(articalsState).filter((i) =>
+    i.id === currentId ? true : false
+  );
+
+  let hhh = foo.reduce((object, current )=>())
+  const [art, setArt] = useState<Art>();
+
+  console.log(foo);
+  console.log(art);
   return (
     <>
+      {/* {articleInFavorite} */}
       {/* <div className={style.btnBack}>
         <Link to="/articles">{"< Back"}</Link>
       </div>

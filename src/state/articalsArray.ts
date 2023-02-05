@@ -169,4 +169,13 @@ const articalsArray: ArticalsProps[] = [
   },
 ];
 
+export const getArticalsObject = (array: ArticalsProps[]) =>
+  array.reduce(
+    (object, artical) => ({
+      ...object,
+      [artical.id]: artical,
+    }),
+    {}
+  );
+
 export default articalsArray;
