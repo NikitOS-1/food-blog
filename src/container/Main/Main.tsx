@@ -60,12 +60,7 @@ const Main = ({ articalsState }: Props) => {
           path="/articles/desserts"
           element={<Desserts articalsState={articalsState} getId={getId} />}
         />
-        <Route
-          path="/favorites"
-          element={
-            <Favorites articalsState={articalsState} currentId={currentId} />
-          }
-        />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </main>

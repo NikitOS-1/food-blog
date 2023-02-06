@@ -4,38 +4,30 @@ import ArticalItem from "../../componets/ArticalItem/ArticalItem";
 import { ArticalsProps } from "../../state/articalsArray";
 import style from "./Favorites.module.scss";
 
-type Props = {
-  articalsState: {
-    id: number;
-    category: string;
-    image: string;
-    title: string;
-    description: string;
-  }[];
-  currentId: number;
-};
-type Art = {
-  id: number;
-  category: string;
-  image: string;
-  title: string;
-  description: string;
-};
+// type Props = {
+//   articalsState: {
+//     id: number;
+//     category: string;
+//     image: string;
+//     title: string;
+//     description: string;
+//   }[];
+//   currentId: number;
+// };
+// type Art = {
+//   [id: number]: {
+//     id: number;
+//     category: string;
+//     image: string;
+//     title: string;
+//     description: string;
+//   };
+// };
 
-const Favorites = ({ currentId, articalsState }: Props) => {
-  console.log("currentId: " + currentId);
-  let foo = Object.values(articalsState).filter((i) =>
-    i.id === currentId ? true : false
-  );
-
-  let hhh = foo.reduce((object, current )=>())
-  const [art, setArt] = useState<Art>();
-
-  console.log(foo);
-  console.log(art);
+const Favorites = () => {
   return (
     <>
-      {/* {articleInFavorite} */}
+      fav
       {/* <div className={style.btnBack}>
         <Link to="/articles">{"< Back"}</Link>
       </div>

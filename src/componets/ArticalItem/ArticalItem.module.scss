@@ -85,27 +85,27 @@
                 }
             }
 
-            .comment {
+            .save {
                 display: flex;
 
-                .commentNormal {
+                .saveNormal {
                     width: 21px;
                     height: 21px;
                     display: block;
                 }
 
-                .commentHover {
+                .saveHover {
                     width: 21px;
                     height: 21px;
                     display: none;
                 }
 
                 &:hover {
-                    .commentHover {
+                    .saveHover {
                         display: block;
                     }
 
-                    .commentNormal {
+                    .saveNormal {
                         display: none;
                     }
                 }
