@@ -22,6 +22,8 @@ const ArticalItem = ({
   addLikesArtToFav,
 }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
+  const [isLike, setIsLike] = useState<boolean>(false);
+  const [isFav, setIsFav] = useState<boolean>(false);
 
   const likeIcon = (
     <svg className={style.likeIcon} width="18" height="18" viewBox="0 0 18 18">
@@ -67,9 +69,6 @@ const ArticalItem = ({
         fill="#333333"></path>
     </svg>
   );
-
-  const [isLike, setIsLike] = useState<boolean>(false);
-  const [isFav, setIsFav] = useState<boolean>(false);
 
   const handleLike = (bool: boolean) => {
     if (bool) {

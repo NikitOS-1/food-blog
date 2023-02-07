@@ -1,7 +1,9 @@
 import { ArticalsProps } from "../../state/articalsArray";
+
 type Props = {
   art: ArticalsProps;
 };
+
 const FavItem = ({ art }: Props) => {
   return (
     <>
