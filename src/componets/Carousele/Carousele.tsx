@@ -5,15 +5,15 @@ type Props = {};
 
 const Carousele = (props: Props) => {
   return (
-    <div className={style.carousele}>
-      <Carousel wrapAround={true} slidesToShow={2}>
-        <img src="/images/steak/steak-6.webp" />
-        <img src="/images/steak/steak-7.webp" />
-        <img src="/images/steak/steak-8.webp" />
-        <img src="/images/steak/steak-3.webp" />
-        <img src="/images/steak/steak-2.webp" />
-      </Carousel>
-    </div>
+    <Carousel
+      wrapAround={false}
+      slidesToShow={1}
+      className={style.carousel}
+      autoplay={true}>
+      <img src="/images/home/foto1.jpeg" className={style.img} />
+      <img src="/images/home/foto2.webp" className={style.img} />
+      <img src="/images/home/foto3.webp" className={style.img} />
+    </Carousel>
   );
 };
 export default Carousele;

@@ -1,37 +1,48 @@
 .home {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     max-width: 1280px;
-    height: 900px;
+    height: 800px;
     margin: 0 auto;
-    padding: 0 15px;
-    background-image: url("../../assets/home.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     filter: sepia(5%);
     filter: brightness(85%);
     filter: opacity(95%);
 
-    .title {
-        font-size: 70px;
-        color: white;
-        font-family: 'Nunito', sans-serif;
-        margin: 10px;
-        letter-spacing: 5px;
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .about {
-        font-size: 20px;
-        font-family: 'Nunito', sans-serif;
-        color: white;
-        letter-spacing: 10px;
-        margin-bottom: 40px;
-    }
+    .titleAndBtn {
+        width: auto;
+        height: 300px;
+        position: absolute;
+        top: 100px;
+        left: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.445);
 
-    .btn {
-        width: 150px;
+        .title {
+            font-size: 70px;
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            margin: 10px;
+            letter-spacing: 5px;
+        }
+
+        .about {
+            font-size: 20px;
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            letter-spacing: 10px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            width: 150px;
+        }
     }
 }

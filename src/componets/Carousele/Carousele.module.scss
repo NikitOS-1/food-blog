@@ -1,4 +1,19 @@
-.carousele {
-    width: 300px;
-    height: 200px;
+.carousel {
+    width: 100%;
+    height: max-content;
+    background-color: rgba(255, 255, 255, 0.117);
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(255, 255, 255, 0.21);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(255, 255, 255, 0.21);
+    box-shadow: 0px 0px 16px 1px rgba(255, 255, 255, 0.21);
+
+    .img {
+        width: 1200px;
+        height: auto;
+        padding-left: 60px;
+        -webkit-box-shadow: 0px 0px 16px 16px rgba(255, 255, 255, 0.21);
+        -moz-box-shadow: 0px 0px 16px 16px rgba(255, 255, 255, 0.21);
+        box-shadow: 0px 0px 16px 16px rgba(255, 255, 255, 0.21);
+    }
 }
