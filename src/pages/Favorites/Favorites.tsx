@@ -1,49 +1,31 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ArticalItem from "../../componets/ArticalItem/ArticalItem";
-import { ArticalsProps } from "../../state/articalsArray";
 import style from "./Favorites.module.scss";
+import { getArticalsObject, ArticalsProps } from "../../state/articalsArray";
+import articalsArray from "../../state/articalsArray";
+import FavItem from "./FavItem";
 
-// type Props = {
-//   articalsState: {
-//     id: number;
-//     category: string;
-//     image: string;
-//     title: string;
-//     description: string;
-//   }[];
-//   currentId: number;
-// };
-// type Art = {
-//   [id: number]: {
-//     id: number;
-//     category: string;
-//     image: string;
-//     title: string;
-//     description: string;
-//   };
-// };
+type Props = {
+  likeArts: {
+    [id: number]: number;
+  };
+  artsObject?: {
+    [id: number]: ArticalsProps;
+  };
+};
 
-const Favorites = () => {
+const Favorites = ({
+  likeArts,
+  artsObject = getArticalsObject(articalsArray),
+}: Props) => {
+  console.log(likeArts);
+  console.log(artsObject);
   return (
     <>
-      fav
-      {/* <div className={style.btnBack}>
-        <Link to="/articles">{"< Back"}</Link>
-      </div>
-      <div className={style.items}>
-        {likeArticals.map(
-          ({ id, category, image, title, description }: ArticalsProps, i) => (
-            <div key={i}>
-              id={id}
-              category={category}
-              image={image}
-              title={title}
-              description={description}
-            </div>
-          )
-        )}
-      </div> */}
+      {Object.keys(likeArts).map((artId) => (
+        <FavItem key={artId} art={artsObject[+artId]} />
+      ))}
     </>
   );
 };

@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import About from "../../pages/About/About";
 import Articles from "../../pages/Articals/Articles";
-import Desserts from "../../pages/Portfolio/Desserts/Desserts";
+// import Desserts from "../../../del/Desserts/Desserts";
 import Favorites from "../../pages/Favorites/Favorites";
-import Fish from "../../pages/Portfolio/Fish/Fish";
+// import Fish from "../../pages/Portfolio/Fish/Fish";
 import Home from "../../pages/Home/Home";
-import Meat from "../../pages/Portfolio/Meat/Meat";
+// import Meat from "../../pages/Portfolio/Meat/Meat";
 import Portfolio from "../../pages/Portfolio/Portfolio";
 import style from "./Main.module.scss";
 import { useState } from "react";
@@ -21,6 +21,10 @@ type Props = {
   }[];
 };
 
+type LikesArt = {
+  [id: number]: number;
+};
+
 const Main = ({ articalsState }: Props) => {
   // -------------GET 'ID' SELECT-----------------
   const [currentId, setCurrentId] = useState<number>(0);
@@ -29,7 +33,14 @@ const Main = ({ articalsState }: Props) => {
   };
 
   // -------------LIKES SYSTEM FOR COMPONENTS AND PAGE FAVORITES-----------------
+  const [likeArts, setLikeArts] = useState<LikesArt>({});
 
+  const addLikesArtToFav = (id: number) => {
+    setLikeArts((prevState: LikesArt) => ({
+      ...prevState,
+      [id]: prevState[id] || 0,
+    }));
+  };
   return (
     <main className={style.main}>
       <Routes>
@@ -37,7 +48,13 @@ const Main = ({ articalsState }: Props) => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route
           path="/articles"
-          element={<Articles articalsState={articalsState} getId={getId} />}
+          element={
+            <Articles
+              articalsState={articalsState}
+              getId={getId}
+              addLikesArtToFav={addLikesArtToFav}
+            />
+          }
         />
         <Route
           path={`/articles/${currentId}`}
@@ -48,7 +65,9 @@ const Main = ({ articalsState }: Props) => {
             />
           }
         />
-        <Route
+        <Route path="/favorites" element={<Favorites likeArts={likeArts} />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route
           path="/articles/meat"
           element={<Meat articalsState={articalsState} getId={getId} />}
         />
@@ -59,9 +78,7 @@ const Main = ({ articalsState }: Props) => {
         <Route
           path="/articles/desserts"
           element={<Desserts articalsState={articalsState} getId={getId} />}
-        />
-        <Route path="/favorites" element={<Favorites />} />
-        <Route path="/about" element={<About />} />
+        /> */}
       </Routes>
     </main>
   );

@@ -9,6 +9,7 @@ type Props = {
   title: string;
   description: string;
   getId: (id: number) => void;
+  addLikesArtToFav: (id: number) => void;
 };
 
 const ArticalItem = ({
@@ -18,6 +19,7 @@ const ArticalItem = ({
   title,
   description,
   getId,
+  addLikesArtToFav,
 }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
 
@@ -49,11 +51,10 @@ const ArticalItem = ({
     if (bool) {
       setIsLike(false);
       setCountLike((prevState: number) => prevState - 1);
-      getId(id);
     } else {
       setIsLike(true);
       setCountLike((prevState: number) => prevState + 1);
-      getId(id);
+      addLikesArtToFav(id);
     }
   };
   return (

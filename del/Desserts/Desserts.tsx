@@ -1,6 +1,6 @@
-import { ArticalsProps } from "../../../state/articalsArray";
+import { ArticalsProps } from "../../src/state/articalsArray";
 import style from "./Desserts.module.scss";
-import ArticalItem from "../../../componets/ArticalItem/ArticalItem";
+import ArticalItem from "../../src/componets/ArticalItem/ArticalItem";
 import { Link } from "react-router-dom";
 
 type Props = {
