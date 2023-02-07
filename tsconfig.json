@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "del/Desserts"  ]
+, "src/pages/Categories/Desserts"  ]
 }

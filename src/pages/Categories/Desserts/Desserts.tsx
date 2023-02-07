@@ -1,6 +1,6 @@
-import { ArticalsProps } from "../../src/state/articalsArray";
+import { ArticalsProps } from "../../../state/articalsArray";
 import style from "./Desserts.module.scss";
-import ArticalItem from "../../src/componets/ArticalItem/ArticalItem";
+import ArticalItem from "../../../componets/ArticalItem/ArticalItem";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -12,9 +12,10 @@ type Props = {
     description: string;
   }[];
   getId: (id: number) => void;
+  addLikesArtToFav: (id: number) => void;
 };
 
-const Desserts = ({ articalsState, getId }: Props) => {
+const Desserts = ({ articalsState, getId, addLikesArtToFav }: Props) => {
   const dessertsCategory = articalsState.filter((category) =>
     category.category === "desserts" ? true : false
   );
@@ -22,7 +23,7 @@ const Desserts = ({ articalsState, getId }: Props) => {
   return (
     <>
       <div className={style.btnBack}>
-        <Link to="/portfolio">{"< Back"}</Link>
+        <Link to="/categories">{"< Back to categories"}</Link>
       </div>
       <div className={style.items}>
         {dessertsCategory.map(
@@ -35,6 +36,7 @@ const Desserts = ({ articalsState, getId }: Props) => {
               title={title}
               description={description}
               getId={getId}
+              addLikesArtToFav={addLikesArtToFav}
             />
           )
         )}
