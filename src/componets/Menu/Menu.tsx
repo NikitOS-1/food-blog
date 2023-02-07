@@ -11,7 +11,7 @@ const Menu = (props: Props) => {
             <MenuItem to="/">Home</MenuItem>
           </li>
           <li>
-            <MenuItem to="portfolio">Portfolio</MenuItem>
+            <MenuItem to="categories">Categories</MenuItem>
           </li>
           <li>
             <MenuItem to="articles">Articles</MenuItem>

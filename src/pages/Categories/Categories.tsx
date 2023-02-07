@@ -1,5 +1,5 @@
 import ButtonAll from "../../componets/ButtonAll/ButtonAll";
-import style from "./Portfolio.module.scss";
+import style from "./Categories.module.scss";
 
 type Props = {};
 

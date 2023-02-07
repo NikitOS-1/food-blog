@@ -6,7 +6,7 @@ import Favorites from "../../pages/Favorites/Favorites";
 // import Fish from "../../pages/Portfolio/Fish/Fish";
 import Home from "../../pages/Home/Home";
 // import Meat from "../../pages/Portfolio/Meat/Meat";
-import Portfolio from "../../pages/Portfolio/Portfolio";
+import Categories from "../../pages/Categories/Categories";
 import style from "./Main.module.scss";
 import { useState } from "react";
 import ArticalExtendedItem from "../../componets/ArticalItem/Extended/ArticalExtendedItem";
@@ -45,7 +45,7 @@ const Main = ({ articalsState }: Props) => {
     <main className={style.main}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/categories" element={<Categories />} />
         <Route
           path="/articles"
           element={

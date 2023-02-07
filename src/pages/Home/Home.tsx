@@ -8,7 +8,7 @@ const Home = (props: Props) => {
     <div className={style.home}>
       <div className={style.title}>Food is art</div>
       <div className={style.about}>Photos</div>
-      <ButtonAll to="/portfolio">See more</ButtonAll>
+      <ButtonAll to="/categories">See more</ButtonAll>
     </div>
   );
 };
