@@ -65,7 +65,10 @@ const Main = ({ articalsState }: Props) => {
             />
           }
         />
-        <Route path="/favorites" element={<Favorites likeArts={likeArts} />} />
+        <Route
+          path="/favorites"
+          element={<Favorites likeArts={likeArts} getId={getId} />}
+        />
         <Route path="/about" element={<About />} />
         {/* <Route
           path="/articles/meat"
