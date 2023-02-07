@@ -15,6 +15,7 @@ const Share = ({ handleShare, id }: Props) => {
           X
         </div>
         <p>http://localhost:3000/articles/{id}</p>
+        <p>http://localhost:3000/articles/{id}</p>
       </div>
     </>
   );
