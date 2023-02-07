@@ -1,10 +1,8 @@
 import style from "./Carousele.module.scss";
-import { Carousel } from "@sefailyasoz/react-carousel";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 type Props = {};
 
 const Carousele = (props: Props) => {
-  return <div>Carousele</div>;
+  return <div className={style.carousele}></div>;
 };
 export default Carousele;
