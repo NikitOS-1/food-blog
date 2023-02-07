@@ -19,8 +19,6 @@ const Favorites = ({
   likeArts,
   artsObject = getArticalsObject(articalsArray),
 }: Props) => {
-  console.log(likeArts);
-  console.log(artsObject);
   return (
     <>
       {Object.keys(likeArts).map((artId) => (

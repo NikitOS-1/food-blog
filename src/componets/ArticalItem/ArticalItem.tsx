@@ -45,7 +45,31 @@ const ArticalItem = ({
         strokeLinejoin="round"></path>
     </svg>
   );
+  const FavNormal = (
+    <svg
+      className={style.saveNormal}
+      width="16"
+      height="20"
+      viewBox="0 0 16 20"
+      fill="none">
+      <path
+        d="M7.65682 15.5085L2.29829 18.4324C1.87045 18.6539 1.34336 18.4971 1.1075 18.0783V18.0783C1.03926 17.9485 1.00245 17.8046 1 17.6582V4.70233C1 2.23141 2.69522 1.24304 5.13467 1.24304H10.8653C13.2304 1.24304 15 2.16552 15 4.5376V17.6582C15 17.8919 14.9068 18.1161 14.7408 18.2814C14.5749 18.4466 14.3498 18.5395 14.1152 18.5395C13.9655 18.5371 13.8184 18.5005 13.6852 18.4324L8.29356 15.5085C8.09488 15.4016 7.8555 15.4016 7.65682 15.5085Z"
+        stroke="#999999"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"></path>
+    </svg>
+  );
+  const FavHover = (
+    <svg className={style.saveHover} width="14" height="18" viewBox="0 0 14 18">
+      <path
+        d="M6.65682 14.5085L1.29829 17.4324C0.87045 17.6539 0.343365 17.4971 0.107501 17.0783C0.0392632 16.9485 0.00244833 16.8046 0 16.6582V3.70233C0 1.23141 1.69522 0.243042 4.13467 0.243042H9.86533C12.2304 0.243042 14 1.16552 14 3.5376V16.6582C14 16.8919 13.9068 17.1161 13.7408 17.2814C13.5749 17.4466 13.3498 17.5395 13.1152 17.5395C12.9655 17.5371 12.8184 17.5005 12.6852 17.4324L7.29356 14.5085C7.09488 14.4016 6.8555 14.4016 6.65682 14.5085Z"
+        fill="#333333"></path>
+    </svg>
+  );
+
   const [isLike, setIsLike] = useState<boolean>(false);
+  const [isFav, setIsFav] = useState<boolean>(false);
 
   const handleLike = (bool: boolean) => {
     if (bool) {
@@ -54,6 +78,13 @@ const ArticalItem = ({
     } else {
       setIsLike(true);
       setCountLike((prevState: number) => prevState + 1);
+    }
+  };
+  const handleSave = (bool: boolean) => {
+    if (bool) {
+      setIsFav(false);
+    } else {
+      setIsFav(true);
       addLikesArtToFav(id);
     }
   };
@@ -72,29 +103,8 @@ const ArticalItem = ({
             {isLike ? likeIcon : unLikeIcon}
             <span className={style.countLike}>{countLike}</span>
           </div>
-          <div className={style.save}>
-            <svg
-              className={style.saveNormal}
-              width="16"
-              height="20"
-              viewBox="0 0 16 20"
-              fill="none">
-              <path
-                d="M7.65682 15.5085L2.29829 18.4324C1.87045 18.6539 1.34336 18.4971 1.1075 18.0783V18.0783C1.03926 17.9485 1.00245 17.8046 1 17.6582V4.70233C1 2.23141 2.69522 1.24304 5.13467 1.24304H10.8653C13.2304 1.24304 15 2.16552 15 4.5376V17.6582C15 17.8919 14.9068 18.1161 14.7408 18.2814C14.5749 18.4466 14.3498 18.5395 14.1152 18.5395C13.9655 18.5371 13.8184 18.5005 13.6852 18.4324L8.29356 15.5085C8.09488 15.4016 7.8555 15.4016 7.65682 15.5085Z"
-                stroke="#999999"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"></path>
-            </svg>
-            <svg
-              className={style.saveHover}
-              width="14"
-              height="18"
-              viewBox="0 0 14 18">
-              <path
-                d="M6.65682 14.5085L1.29829 17.4324C0.87045 17.6539 0.343365 17.4971 0.107501 17.0783C0.0392632 16.9485 0.00244833 16.8046 0 16.6582V3.70233C0 1.23141 1.69522 0.243042 4.13467 0.243042H9.86533C12.2304 0.243042 14 1.16552 14 3.5376V16.6582C14 16.8919 13.9068 17.1161 13.7408 17.2814C13.5749 17.4466 13.3498 17.5395 13.1152 17.5395C12.9655 17.5371 12.8184 17.5005 12.6852 17.4324L7.29356 14.5085C7.09488 14.4016 6.8555 14.4016 6.65682 14.5085Z"
-                fill="#333333"></path>
-            </svg>
+          <div className={style.save} onClick={() => handleSave(isFav)}>
+            {isFav ? FavHover : FavNormal}
           </div>
           <div className={style.share}>
             <svg

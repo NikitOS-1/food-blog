@@ -97,18 +97,18 @@
                 .saveHover {
                     width: 21px;
                     height: 21px;
-                    display: none;
+                    display: block;
                 }
 
-                &:hover {
-                    .saveHover {
-                        display: block;
-                    }
+                // &:hover {
+                //     .saveHover {
+                //         display: block;
+                //     }
 
-                    .saveNormal {
-                        display: none;
-                    }
-                }
+                //     .saveNormal {
+                //         display: none;
+                //     }
+                // }
             }
 
             .share {
