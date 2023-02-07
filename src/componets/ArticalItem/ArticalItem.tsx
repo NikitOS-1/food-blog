@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./ArticalItem.module.scss";
+import Share from "./Share/Share";
 
 type Props = {
   id: number;
@@ -87,6 +88,10 @@ const ArticalItem = ({
       addLikesArtToFav(id);
     }
   };
+  const [shareShow, setShareShow] = useState<boolean>(false);
+  const handleShare = (bool: boolean) => {
+    setShareShow(bool);
+  };
   return (
     <div className={style.wrap}>
       <div className={style.item}>
@@ -105,7 +110,7 @@ const ArticalItem = ({
           <div className={style.save} onClick={() => handleSave(isFav)}>
             {isFav ? FavHover : FavNormal}
           </div>
-          <div className={style.share}>
+          <div className={style.share} onClick={() => handleShare(true)}>
             <svg
               className={style.shareNormal}
               width="20"
@@ -128,6 +133,14 @@ const ArticalItem = ({
             </svg>
             <span className={style.shareTitle}>Share</span>
           </div>
+          {shareShow && (
+            <Share
+              handleShare={handleShare}
+              id={id}
+              image={image}
+              title={title}
+            />
+          )}
         </div>
       </div>
     </div>

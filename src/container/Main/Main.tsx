@@ -10,6 +10,7 @@ import Categories from "../../pages/Categories/Categories";
 import style from "./Main.module.scss";
 import { useState } from "react";
 import ArticalExtendedItem from "../../componets/ArticalItem/Extended/ArticalExtendedItem";
+import Share from "../../componets/ArticalItem/Share/Share";
 
 type Props = {
   articalsState: {

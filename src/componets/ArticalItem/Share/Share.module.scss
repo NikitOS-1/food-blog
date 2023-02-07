@@ -1,0 +1,13 @@
+.wrap {
+    background-color: rgba(0, 0, 0, 0.618);
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    z-index: 98;
+
+    .close {
+        border: 1px solid black;
+        width: 30px;
+        height: 30px;
+    }
+}
