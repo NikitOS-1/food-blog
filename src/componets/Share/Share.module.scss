@@ -1,0 +1,54 @@
+.wrap {
+    background-color: rgba(0, 0, 0, 0.618);
+    width: 500px;
+    height: max-content;
+    position: absolute;
+    z-index: 98;
+    margin: 0 auto;
+    padding: 20px;
+
+    .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: large;
+        font-weight: bolder;
+        width: 30px;
+        height: 30px;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .img {
+            img {
+                border-radius: 10px;
+                width: 150px;
+                height: auto;
+            }
+        }
+
+        .title {
+            color: white;
+            margin-bottom: 10px;
+        }
+    }
+
+    .thisLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input {
+
+            color: black;
+            font-size: 20px;
+            height: 50px;
+            width: 300px;
+        }
+    }
+}

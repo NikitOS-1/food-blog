@@ -10,7 +10,6 @@ import Categories from "../../pages/Categories/Categories";
 import style from "./Main.module.scss";
 import { useState } from "react";
 import ArticalExtendedItem from "../../componets/ArticalItem/Extended/ArticalExtendedItem";
-import Share from "../../componets/ArticalItem/Share/Share";
 
 type Props = {
   articalsState: {
@@ -22,7 +21,7 @@ type Props = {
   }[];
 };
 
-type LikesArt = {
+type FavArt = {
   [id: number]: number;
 };
 
@@ -33,15 +32,16 @@ const Main = ({ articalsState }: Props) => {
     setCurrentId(id);
   };
 
-  // -------------LIKES SYSTEM FOR COMPONENTS AND PAGE FAVORITES-----------------
-  const [likeArts, setLikeArts] = useState<LikesArt>({});
+  // -------------ADD TO FAVORITES-----------------
+  const [favArts, setFavArts] = useState<FavArt>({});
 
-  const addLikesArtToFav = (id: number) => {
-    setLikeArts((prevState: LikesArt) => ({
+  const addToFavArt = (id: number) => {
+    setFavArts((prevState: FavArt) => ({
       ...prevState,
       [id]: prevState[id] || 0,
     }));
   };
+
   return (
     <main className={style.main}>
       <Routes>
@@ -53,7 +53,7 @@ const Main = ({ articalsState }: Props) => {
             <Meat
               articalsState={articalsState}
               getId={getId}
-              addLikesArtToFav={addLikesArtToFav}
+              addToFavArt={addToFavArt}
             />
           }
         />
@@ -63,7 +63,7 @@ const Main = ({ articalsState }: Props) => {
             <Fish
               articalsState={articalsState}
               getId={getId}
-              addLikesArtToFav={addLikesArtToFav}
+              addToFavArt={addToFavArt}
             />
           }
         />
@@ -73,7 +73,7 @@ const Main = ({ articalsState }: Props) => {
             <Desserts
               articalsState={articalsState}
               getId={getId}
-              addLikesArtToFav={addLikesArtToFav}
+              addToFavArt={addToFavArt}
             />
           }
         />
@@ -83,7 +83,7 @@ const Main = ({ articalsState }: Props) => {
             <Articles
               articalsState={articalsState}
               getId={getId}
-              addLikesArtToFav={addLikesArtToFav}
+              addToFavArt={addToFavArt}
             />
           }
         />
@@ -98,7 +98,7 @@ const Main = ({ articalsState }: Props) => {
         />
         <Route
           path="/favorites"
-          element={<Favorites likeArts={likeArts} getId={getId} />}
+          element={<Favorites favArts={favArts} getId={getId} />}
         />
         <Route path="/about" element={<About />} />
       </Routes>

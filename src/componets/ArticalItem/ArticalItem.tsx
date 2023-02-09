@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./ArticalItem.module.scss";
-import Share from "./Share/Share";
+import Share from "../Share/Share";
 
 type Props = {
   id: number;
@@ -10,7 +10,7 @@ type Props = {
   title: string;
   description: string;
   getId: (id: number) => void;
-  addLikesArtToFav: (id: number) => void;
+  addToFavArt: (id: number) => void;
 };
 
 const ArticalItem = ({
@@ -20,11 +20,12 @@ const ArticalItem = ({
   title,
   description,
   getId,
-  addLikesArtToFav,
+  addToFavArt,
 }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
   const [isLike, setIsLike] = useState<boolean>(false);
   const [isFav, setIsFav] = useState<boolean>(false);
+  const [shareShow, setShareShow] = useState<boolean>(false);
 
   const likeIcon = (
     <svg className={style.likeIcon} width="18" height="18" viewBox="0 0 18 18">
@@ -48,7 +49,7 @@ const ArticalItem = ({
         strokeLinejoin="round"></path>
     </svg>
   );
-  const FavNormal = (
+  const FavNormalIcon = (
     <svg
       className={style.saveNormal}
       width="16"
@@ -63,7 +64,7 @@ const ArticalItem = ({
         strokeLinejoin="round"></path>
     </svg>
   );
-  const FavHover = (
+  const FavHoverIcon = (
     <svg className={style.saveHover} width="14" height="18" viewBox="0 0 14 18">
       <path
         d="M6.65682 14.5085L1.29829 17.4324C0.87045 17.6539 0.343365 17.4971 0.107501 17.0783C0.0392632 16.9485 0.00244833 16.8046 0 16.6582V3.70233C0 1.23141 1.69522 0.243042 4.13467 0.243042H9.86533C12.2304 0.243042 14 1.16552 14 3.5376V16.6582C14 16.8919 13.9068 17.1161 13.7408 17.2814C13.5749 17.4466 13.3498 17.5395 13.1152 17.5395C12.9655 17.5371 12.8184 17.5005 12.6852 17.4324L7.29356 14.5085C7.09488 14.4016 6.8555 14.4016 6.65682 14.5085Z"
@@ -85,13 +86,13 @@ const ArticalItem = ({
       setIsFav(false);
     } else {
       setIsFav(true);
-      addLikesArtToFav(id);
+      addToFavArt(id);
     }
   };
-  const [shareShow, setShareShow] = useState<boolean>(false);
   const handleShare = (bool: boolean) => {
     setShareShow(bool);
   };
+
   return (
     <div className={style.wrap}>
       <div className={style.item}>
@@ -108,7 +109,7 @@ const ArticalItem = ({
             <span className={style.countLike}>{countLike}</span>
           </div>
           <div className={style.save} onClick={() => handleSave(isFav)}>
-            {isFav ? FavHover : FavNormal}
+            {isFav ? FavHoverIcon : FavNormalIcon}
           </div>
           <div className={style.share} onClick={() => handleShare(true)}>
             <svg

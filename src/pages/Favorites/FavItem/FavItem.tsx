@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArticalsProps } from "../../../state/articalsArray";
 import style from "./FavItem.module.scss";
@@ -8,6 +9,8 @@ type Props = {
 };
 
 const FavItem = ({ art, getId }: Props) => {
+  const [countLike, setCountLike] = useState<number>(0);
+  const [isLike, setIsLike] = useState<boolean>(false);
   const likeIcon = (
     <svg className={style.likeIcon} width="18" height="18" viewBox="0 0 18 18">
       <path
@@ -52,7 +55,15 @@ const FavItem = ({ art, getId }: Props) => {
         fill="#333333"></path>
     </svg>
   );
-
+  const handleLike = (bool: boolean) => {
+    if (bool) {
+      setIsLike(false);
+      setCountLike((prevState: number) => prevState - 1);
+    } else {
+      setIsLike(true);
+      setCountLike((prevState: number) => prevState + 1);
+    }
+  };
   return (
     <div className={style.wrap}>
       <div className={style.item}>
@@ -64,10 +75,9 @@ const FavItem = ({ art, getId }: Props) => {
           <div className={style.description}>{art.description}</div>
         </Link>
         <div className={style.itemOption}>
-          <div className={style.like}>
-            {/* {isLike ? likeIcon : unLikeIcon} */}
-            {likeIcon}
-            <span className={style.countLike}>{1}</span>
+          <div className={style.like} onClick={() => handleLike(isLike)}>
+            {isLike ? likeIcon : unLikeIcon}
+            <span className={style.countLike}>{countLike}</span>
           </div>
           <div className={style.save}>{FavHover}</div>
           <div className={style.share}>

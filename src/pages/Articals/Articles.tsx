@@ -11,10 +11,10 @@ type Props = {
     description: string;
   }[];
   getId: (id: number) => void;
-  addLikesArtToFav: (id: number) => void;
+  addToFavArt: (id: number) => void;
 };
 
-const Articals = ({ articalsState, getId, addLikesArtToFav }: Props) => {
+const Articals = ({ articalsState, getId, addToFavArt }: Props) => {
   return (
     <div className={style.items}>
       {articalsState.map(
@@ -27,7 +27,7 @@ const Articals = ({ articalsState, getId, addLikesArtToFav }: Props) => {
             title={title}
             description={description}
             getId={getId}
-            addLikesArtToFav={addLikesArtToFav}
+            addToFavArt={addToFavArt}
           />
         )
       )}

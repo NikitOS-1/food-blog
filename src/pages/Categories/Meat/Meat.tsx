@@ -12,10 +12,10 @@ type Props = {
     description: string;
   }[];
   getId: (id: number) => void;
-  addLikesArtToFav: (id: number) => void;
+  addToFavArt: (id: number) => void;
 };
 
-const Meat = ({ articalsState, getId, addLikesArtToFav }: Props) => {
+const Meat = ({ articalsState, getId, addToFavArt }: Props) => {
   const meatCategory = articalsState.filter((category) =>
     category.category === "meat" ? true : false
   );
@@ -36,7 +36,7 @@ const Meat = ({ articalsState, getId, addLikesArtToFav }: Props) => {
               title={title}
               description={description}
               getId={getId}
-              addLikesArtToFav={addLikesArtToFav}
+              addToFavArt={addToFavArt}
             />
           )
         )}
