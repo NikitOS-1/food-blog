@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Share from "../../Share/Share";
 import Coment from "../Coment/Coment";
 import style from "./ArticalExtendedItem.module.scss";
 
@@ -28,6 +29,11 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
   );
   const [countLike, setCountLike] = useState<number>(0);
   const [isLike, setIsLike] = useState<boolean>(false);
+  const [shareShow, setShareShow] = useState<boolean>(false);
+
+  const handleShare = (bool: boolean) => {
+    setShareShow(bool);
+  };
 
   const likeIcon = (
     <svg className={style.likeIcon} width="18" height="18" viewBox="0 0 18 18">
@@ -117,7 +123,7 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
                   {isLike ? likeIcon : unLikeIcon}
                   <span className={style.countLike}>{countLike}</span>
                 </div>
-                <div className={style.share}>
+                <div className={style.share} onClick={() => handleShare(true)}>
                   <svg
                     className={style.shareNormal}
                     width="20"
@@ -140,6 +146,14 @@ const ArticalExtendedItem = ({ articalsState, currentId }: Props) => {
                   </svg>
                   <span className={style.shareTitle}>Share</span>
                 </div>
+                {shareShow && (
+                  <Share
+                    handleShare={handleShare}
+                    id={id}
+                    image={image}
+                    title={title}
+                  />
+                )}
               </div>
               <div className={style.title}>{title}</div>
               <div className={style.description}>{description}</div>
