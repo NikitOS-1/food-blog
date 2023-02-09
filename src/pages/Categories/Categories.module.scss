@@ -19,12 +19,20 @@
         flex-direction: column;
         width: 32%;
         height: 800px;
-        background-image: url('../../assets/article-1.webp');
+        background-image: url('../../assets/meat2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
 
-        div {
-            margin-top: 30px;
+        .wrap {
+            position: relative;
+            width: auto;
+            height: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.093);
+
+            div {
+                margin-top: 30px;
+            }
         }
     }
 
@@ -34,27 +42,43 @@
         flex-direction: column;
         width: 32%;
         height: 800px;
-        background-image: url('../../assets/article-2.webp');
+        background-image: url('../../assets/fish.jpg');
         background-repeat: no-repeat;
         background-size: cover;
 
-        div {
-            margin-top: 30px;
+        .wrap {
+            position: relative;
+            width: auto;
+            height: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.193);
+
+            div {
+                margin-top: 30px;
+            }
         }
     }
 
-    .dishes {
+    .desserts {
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 32%;
         height: 800px;
-        background-image: url('../../assets/article-3.webp');
+        background-image: url('../../assets/desert.jpg');
         background-repeat: no-repeat;
         background-size: cover;
 
-        div {
-            margin-top: 30px;
+        .wrap {
+            position: relative;
+            width: auto;
+            height: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.244);
+
+            div {
+                margin-top: 30px;
+            }
         }
     }
 }
