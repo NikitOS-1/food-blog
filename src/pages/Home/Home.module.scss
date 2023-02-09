@@ -15,11 +15,13 @@
     }
 
     .titleAndBtn {
-        width: auto;
+        width: 450px;
         height: 300px;
         position: absolute;
-        top: 100px;
-        left: 450px;
+        top: 150px;
+        left: 440px;
+        right: auto;
+        bottom: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
