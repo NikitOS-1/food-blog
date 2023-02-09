@@ -22,6 +22,14 @@ const Favorites = ({
 }: Props) => {
   return (
     <div className={style.items}>
+      {Object.values(favArts).length == 0 ? (
+        <div className={style.notChoise}>
+          You haven't chosen your favorite dish yet...
+          <div className={style.smile}>{"(─‿‿─)"}</div>
+        </div>
+      ) : (
+        false
+      )}
       {Object.keys(favArts).map((artId) => (
         <FavItem
           key={artId}
