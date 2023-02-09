@@ -41,7 +41,14 @@ const Main = ({ articalsState }: Props) => {
       [id]: prevState[id] || 0,
     }));
   };
-
+  const removeArtFromFav = (id: number) => {
+    // setFavArts(
+    // (prevState: ProductsInCart) => omit(prevState, [id])
+    // {let prevProductsInCart = { ...prevState };
+    // delete prevProductsInCart[id];
+    // return prevProductsInCart;}
+    // );
+  };
   return (
     <main className={style.main}>
       <Routes>
