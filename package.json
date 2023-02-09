@@ -2,7 +2,7 @@
   "name": "food-blog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nikitos-1.github.io/",
+  "homepage": "https://nikitos-1.github.io",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

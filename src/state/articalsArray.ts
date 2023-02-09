@@ -122,7 +122,7 @@ const articalsArray: ArticalsProps[] = [
   {
     id: 15,
     category: "desserts",
-    image: "/food-blog/images/des-1.jpg",
+    image: "/images/desserts/des-1.jpg",
     title: "PP cottage cheese pancakes",
     description:
       "In the simplest recipe for the “correct” cheesecakes, you can add a certain zest. Try frying them in coconut oil! Your syrniki will acquire a slight aftertaste of coconut, and the house will be filled with a wonderful aroma. It's healthy and very tasty!",
@@ -130,7 +130,7 @@ const articalsArray: ArticalsProps[] = [
   {
     id: 16,
     category: "desserts",
-    image: "/food-blog/images/desserts/des-2.jpg",
+    image: "/images/desserts/des-2.jpg",
     title: "Meringue 'Christmas Trees'",
     description:
       "A great idea is to make meringues on the occasion of the New Year, giving them the shape of a Christmas tree, deer or snowflake. This dessert based on Italian meringue is prepared quite simply, but it is worth considering such important nuances as the weight of the products and temperature.",
