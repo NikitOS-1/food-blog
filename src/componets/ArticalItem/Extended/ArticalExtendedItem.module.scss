@@ -129,32 +129,6 @@
             }
         }
 
-        .comment {
-            display: flex;
-
-            .commentNormal {
-                width: 21px;
-                height: 21px;
-                display: block;
-            }
-
-            .commentHover {
-                width: 21px;
-                height: 21px;
-                display: none;
-            }
-
-            &:hover {
-                .commentHover {
-                    display: block;
-                }
-
-                .commentNormal {
-                    display: none;
-                }
-            }
-        }
-
         .share {
             display: flex;
 
