@@ -2,6 +2,7 @@
   "name": "food-blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nikitos-1.github.io/food-blog/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -27,6 +28,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,6 +54,7 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.191"
+    "@types/lodash": "^4.14.191",
+    "gh-pages": "^5.0.0"
   }
 }
