@@ -11,17 +11,24 @@ type Props = {
     [id: number]: ArticalsProps;
   };
   getId: (id: number) => void;
+  removeArtFromFav: (id: number) => void;
 };
 
 const Favorites = ({
   favArts,
   artsObject = getArticalsObject(articalsArray),
   getId,
+  removeArtFromFav,
 }: Props) => {
   return (
     <div className={style.items}>
       {Object.keys(favArts).map((artId) => (
-        <FavItem key={artId} art={artsObject[+artId]} getId={getId} />
+        <FavItem
+          key={artId}
+          art={artsObject[+artId]}
+          getId={getId}
+          removeArtFromFav={removeArtFromFav}
+        />
       ))}
     </div>
   );

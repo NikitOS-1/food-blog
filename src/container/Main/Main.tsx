@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import About from "../../pages/About/About";
 import Articles from "../../pages/Articals/Articles";
 import Desserts from "../../pages/Categories/Desserts/Desserts";
 import Meat from "../../pages/Categories/Meat/Meat";
@@ -10,6 +9,7 @@ import Categories from "../../pages/Categories/Categories";
 import style from "./Main.module.scss";
 import { useState } from "react";
 import ArticalExtendedItem from "../../componets/ArticalItem/Extended/ArticalExtendedItem";
+import { omit } from "lodash";
 
 type Props = {
   articalsState: {
@@ -42,12 +42,7 @@ const Main = ({ articalsState }: Props) => {
     }));
   };
   const removeArtFromFav = (id: number) => {
-    // setFavArts(
-    // (prevState: ProductsInCart) => omit(prevState, [id])
-    // {let prevProductsInCart = { ...prevState };
-    // delete prevProductsInCart[id];
-    // return prevProductsInCart;}
-    // );
+    setFavArts((prevState: FavArt) => omit(prevState, [id]));
   };
   return (
     <main className={style.main}>
@@ -105,9 +100,14 @@ const Main = ({ articalsState }: Props) => {
         />
         <Route
           path="/favorites"
-          element={<Favorites favArts={favArts} getId={getId} />}
+          element={
+            <Favorites
+              favArts={favArts}
+              getId={getId}
+              removeArtFromFav={removeArtFromFav}
+            />
+          }
         />
-        <Route path="/about" element={<About />} />
       </Routes>
     </main>
   );

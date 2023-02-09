@@ -7,9 +7,10 @@ import style from "./FavItem.module.scss";
 type Props = {
   art: ArticalsProps;
   getId: (id: number) => void;
+  removeArtFromFav: (id: number) => void;
 };
 
-const FavItem = ({ art, getId }: Props) => {
+const FavItem = ({ art, getId, removeArtFromFav }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
   const [isLike, setIsLike] = useState<boolean>(false);
   const [shareShow, setShareShow] = useState<boolean>(false);
@@ -86,7 +87,9 @@ const FavItem = ({ art, getId }: Props) => {
             {isLike ? likeIcon : unLikeIcon}
             <span className={style.countLike}>{countLike}</span>
           </div>
-          <div className={style.save}>{FavHover}</div>
+          <div className={style.save} onClick={() => removeArtFromFav(art.id)}>
+            {FavHover}
+          </div>
           <div className={style.share} onClick={() => handleShare(true)}>
             <svg
               className={style.shareNormal}

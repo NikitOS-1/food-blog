@@ -19,9 +19,6 @@ const Menu = (props: Props) => {
           <li>
             <MenuItem to="favorites">Favorites</MenuItem>
           </li>
-          <li>
-            <MenuItem to="about">About</MenuItem>
-          </li>
         </ul>
       </nav>
     </>
