@@ -13,6 +13,9 @@ const Carousele = (props: Props) => {
       <img src="/images/home/foto1.jpeg" className={style.img} />
       <img src="/images/home/foto2.webp" className={style.img} />
       <img src="/images/home/foto3.webp" className={style.img} />
+      <img src="/images/steak/steak-4.webp" className={style.img} />
+      <img src="/images/steak/steak-5.webp" className={style.img} />
+      <img src="/images/steak/steak-6.webp" className={style.img} />
     </Carousel>
   );
 };
