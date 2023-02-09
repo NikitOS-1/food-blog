@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Share from "../../../componets/Share/Share";
 import { ArticalsProps } from "../../../state/articalsArray";
 import style from "./FavItem.module.scss";
 
@@ -11,6 +12,12 @@ type Props = {
 const FavItem = ({ art, getId }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
   const [isLike, setIsLike] = useState<boolean>(false);
+  const [shareShow, setShareShow] = useState<boolean>(false);
+
+  const handleShare = (bool: boolean) => {
+    setShareShow(bool);
+  };
+
   const likeIcon = (
     <svg className={style.likeIcon} width="18" height="18" viewBox="0 0 18 18">
       <path
@@ -80,7 +87,7 @@ const FavItem = ({ art, getId }: Props) => {
             <span className={style.countLike}>{countLike}</span>
           </div>
           <div className={style.save}>{FavHover}</div>
-          <div className={style.share}>
+          <div className={style.share} onClick={() => handleShare(true)}>
             <svg
               className={style.shareNormal}
               width="20"
@@ -103,6 +110,14 @@ const FavItem = ({ art, getId }: Props) => {
             </svg>
             <span className={style.shareTitle}>Share</span>
           </div>
+          {shareShow && (
+            <Share
+              handleShare={handleShare}
+              id={art.id}
+              image={art.image}
+              title={art.title}
+            />
+          )}
         </div>
       </div>
     </div>
