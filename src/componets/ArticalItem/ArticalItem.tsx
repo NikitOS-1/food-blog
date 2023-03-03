@@ -99,7 +99,6 @@ const ArticalItem = ({
         </Link>
         <div className={style.itemOption}>
           <div
-          <div
             className={style.like}
             onClick={() =>
               isLike ? dispatch(removeLike(id)) : dispatch(addLike(id))
