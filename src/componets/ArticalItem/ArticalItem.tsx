@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./ArticalItem.module.scss";
 import Share from "../Share/Share";
+import { useAppDispatch, useAppSelector } from "../../redux/hooksType";
+import { addLike, removeLike } from "../../redux/likeReducer";
 
 type Props = {
   id: number;
@@ -23,7 +25,6 @@ const ArticalItem = ({
   addToFavArt,
 }: Props) => {
   const [countLike, setCountLike] = useState<number>(0);
-  const [isLike, setIsLike] = useState<boolean>(false);
   const [isFav, setIsFav] = useState<boolean>(false);
   const [shareShow, setShareShow] = useState<boolean>(false);
 
@@ -72,15 +73,6 @@ const ArticalItem = ({
     </svg>
   );
 
-  const handleLike = (bool: boolean) => {
-    if (bool) {
-      setIsLike(false);
-      setCountLike((prevState: number) => prevState - 1);
-    } else {
-      setIsLike(true);
-      setCountLike((prevState: number) => prevState + 1);
-    }
-  };
   const handleSave = (bool: boolean) => {
     if (bool) {
       setIsFav(false);
@@ -92,6 +84,8 @@ const ArticalItem = ({
   const handleShare = (bool: boolean) => {
     setShareShow(bool);
   };
+  const isLike = useAppSelector((state) => state.like[id]);
+  const dispatch = useAppDispatch();
 
   return (
     <div className={style.wrap}>
@@ -104,7 +98,11 @@ const ArticalItem = ({
           <div className={style.description}>{description}</div>
         </Link>
         <div className={style.itemOption}>
-          <div className={style.like} onClick={() => handleLike(isLike)}>
+          <div
+            className={style.like}
+            onClick={() =>
+              isLike ? dispatch(removeLike(id)) : dispatch(addLike(id))
+            }>
             {isLike ? likeIcon : unLikeIcon}
             <span className={style.countLike}>{countLike}</span>
           </div>
