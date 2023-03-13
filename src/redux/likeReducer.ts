@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface LikeState {
   [id: number]: boolean;
+  [id: number]: boolean;
 }
 
 const initialState: LikeState = {
